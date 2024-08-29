@@ -34,7 +34,7 @@ def fetch_weather():
         weather = data["weather"][0]["description"]
         weather_label.config(text=f"Temperature: {temperature}°C\nWeather: {weather}")
     except Exception as e:
-        messagebox.showerror("Error", "Unable to fetch weather data")
+        tk.messagebox.showerror("Error", "Unable to fetch weather data")
 
 fetch_button.config(command=fetch_weather)
 
