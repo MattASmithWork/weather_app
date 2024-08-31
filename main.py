@@ -31,6 +31,7 @@ def fetch_weather():
         response = requests.get(url)
         data = response.json()
         temperature = data["main"]["temp"]
+        feels_like = data["main"]["feels_like"]
         weather = data["weather"][0]["description"]
         weather_label.config(text=f"Temperature: {temperature}°C\nWeather: {weather}")
     except Exception as e:
